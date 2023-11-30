@@ -1,13 +1,13 @@
 {
   "name": "nextjs-dota2-web",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "release": "standard-version --releaseCommitMessageFormat 'chore(release): %s\n\n [skip ci]'  & exit"
+    "release": "standard-version --releaseCommitMessageFormat 'chore(release): %s\n\n [skip ci]' & exit"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx}": [
