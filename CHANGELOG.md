@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.7](https://github.com/zzz1220/nextjs-dota2-web/compare/v0.1.8...v0.1.7) (2023-11-30)
+
 ### [0.1.6](https://github.com/zzz1220/nextjs-dota2-web/compare/v0.1.8...v0.1.6) (2023-11-30)
 
 ### [0.1.5](https://github.com/zzz1220/nextjs-dota2-web/compare/v0.1.8...v0.1.5) (2023-11-30)
