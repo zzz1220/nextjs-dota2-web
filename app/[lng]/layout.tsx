@@ -26,7 +26,7 @@ export default function RootLayout({
   params: any
 }) {
   return (
-    <html lang={lng} dir={dir(lng)}>
+    <html lang={lng} dir={dir(lng)} className="dark">
       <body className={inter.className}>
         <Providers>
           {children}
