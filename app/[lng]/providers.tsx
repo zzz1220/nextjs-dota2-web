@@ -1,14 +1,15 @@
 // app/providers.tsx
-'use client'
+"use client";
 
-import { NextUIProvider } from '@nextui-org/react'
+import { NextUIProvider } from "@nextui-org/react";
+import { ThemeProvider as NextThemesProvider } from "next-themes";
 
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
     <NextUIProvider>
-      <main className="dark text-foreground bg-background">
+      <NextThemesProvider attribute="class" defaultTheme="dark">
         {children}
-      </main>
+      </NextThemesProvider>
     </NextUIProvider>
-  )
+  );
 }

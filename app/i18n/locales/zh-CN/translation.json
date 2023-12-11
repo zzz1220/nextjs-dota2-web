@@ -1,4 +1,8 @@
 {
-    "title": "你好",
-    "to-second-page": "To second page"
+  "title": "你好",
+  "to-second-page": "To second page",
+  "navbar": {
+    "logo": "刀塔2",
+    "heroes": "英雄"
+  }
 }

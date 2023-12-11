@@ -1,13 +1,8 @@
-import { Footer } from './components/Footer'
-import { useTranslation } from '../i18n'
-import Navbar from './components/Navbar'
+import { Footer } from "./components/Footer";
+import { useTranslation } from "../i18n";
 
-export default async function Page({ params: { lng } } : any) {
-  const {t} = await useTranslation(lng)
-  return (
-    <>
-      <Navbar/>
-      <Footer lng={lng}/>
-    </>
-  )
+export default async function Page({ params: { lng } }: any) {
+  const { t } = await useTranslation(lng);
+
+  return <></>;
 }

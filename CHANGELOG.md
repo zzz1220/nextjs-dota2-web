@@ -32,7 +32,6 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### 0.1.1 (2023-11-30)
 
-
 ### Features
 
-* init ([61cb498](https://github.com/zzz1220/nextjs-dota2-web/commit/61cb498444e753bc353444dd8d8ae0b8c0b2513c))
+- init ([61cb498](https://github.com/zzz1220/nextjs-dota2-web/commit/61cb498444e753bc353444dd8d8ae0b8c0b2513c))
