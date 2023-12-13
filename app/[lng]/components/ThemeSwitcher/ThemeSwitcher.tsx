@@ -8,7 +8,7 @@ import { SunIcon } from "./SunIcon";
 
 export function ThemeSwitcher() {
   const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const { setTheme } = useTheme();
 
   useEffect(() => {
     setMounted(true);
@@ -28,8 +28,6 @@ export function ThemeSwitcher() {
         )
       }
       onValueChange={(isSelected) => setTheme(isSelected ? "light" : "dark")}
-    >
-      {theme} mode
-    </Switch>
+    />
   );
 }

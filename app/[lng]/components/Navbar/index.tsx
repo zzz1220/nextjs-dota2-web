@@ -8,6 +8,8 @@ import {
   NavbarItem,
   Link,
   Button,
+  Select,
+  SelectItem,
 } from "@nextui-org/react";
 import logo from "./logo.svg";
 import { ThemeSwitcher } from "../ThemeSwitcher/ThemeSwitcher";
@@ -17,7 +19,7 @@ export default function App({ lng }: { lng: string }) {
   const { t } = useTranslation(lng, "translation");
 
   return (
-    <Navbar>
+    <Navbar shouldHideOnScroll maxWidth="full">
       <NavbarBrand>
         <Image src={logo} width={48} height={48} alt="logo" />
         <p className="font-bold text-inherit">{t("navbar.logo")}</p>
@@ -40,6 +42,9 @@ export default function App({ lng }: { lng: string }) {
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
+        <NavbarItem>
+          <ThemeSwitcher />
+        </NavbarItem>
         <NavbarItem className="hidden lg:flex">
           <Link href="#">Login</Link>
         </NavbarItem>
@@ -47,9 +52,6 @@ export default function App({ lng }: { lng: string }) {
           <Button as={Link} color="primary" href="/" variant="flat">
             Sign Up
           </Button>
-        </NavbarItem>
-        <NavbarItem>
-          <ThemeSwitcher />
         </NavbarItem>
       </NavbarContent>
     </Navbar>

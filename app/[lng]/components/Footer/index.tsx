@@ -1,26 +1,28 @@
-import Link from "next/link";
-import { Trans } from "react-i18next/TransWithoutContext";
-import { languages } from "../../../i18n/settings";
-import { useTranslation } from "../../../i18n";
-import { Card } from "@nextui-org/react";
+"use client";
+import { useTranslation } from "@/app/i18n/index";
+import { Select, SelectItem } from "@nextui-org/react";
 
+const animals = [
+  {
+    label: "Cat",
+    value: "cat",
+    description: "The second most popular pet in the world",
+  },
+  {
+    label: "Dog",
+    value: "dog",
+    description: "The most popular pet in the world",
+  },
+];
 export const Footer = async ({ lng }: { lng: string }) => {
   const { t } = await useTranslation(lng, "footer");
   return (
-    <Card>
-      <Trans i18nKey="languageSwitcher" t={t}>
-        Switch from <strong>{lng}</strong> to:{" "}
-      </Trans>
-      {languages
-        .filter((l) => lng !== l)
-        .map((l, index) => {
-          return (
-            <span key={l}>
-              {index > 0 && " or "}
-              <Link href={`/${l}`}>{l}</Link>
-            </span>
-          );
-        })}
-    </Card>
+    <Select label={t("title")}>
+      {animals.map((animal) => (
+        <SelectItem key={animal.value} value={animal.value}>
+          {animal.label}
+        </SelectItem>
+      ))}
+    </Select>
   );
 };
