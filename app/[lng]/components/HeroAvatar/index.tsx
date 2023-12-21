@@ -8,12 +8,6 @@ const imageLoader: ImageLoader = ({ src }) => {
 
 export default function HeroAvatar({ imgSrc }: any) {
   return (
-    <Image
-      loader={imageLoader}
-      src={imgSrc}
-      width="200"
-      height={"200"}
-      alt=""
-    />
+    <Image loader={imageLoader} src={imgSrc} width="256" height="144" alt="" />
   );
 }

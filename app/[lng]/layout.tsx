@@ -6,6 +6,7 @@ import { dir } from "i18next";
 import { languages } from "../i18n/settings";
 import Navbar from "./components/Navbar";
 import { Footer } from "./components/Footer";
+import { Card } from "@nextui-org/react";
 
 export async function generateStaticParams() {
   return languages.map((lng) => ({ lng }));
@@ -32,7 +33,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Providers>
           <Navbar lng={lng} />
-          {children}
+          <Card className="min-h-screen rounded-none">{children}</Card>
           <Footer lng={lng} />
         </Providers>
       </body>
