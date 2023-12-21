@@ -4,7 +4,7 @@ import AttrCheckbox from "./AttrCheckbox";
 import { useEffect, useState } from "react";
 
 export function Filter() {
-  const [groupSelected, setGroupSelectrd] = useState([]);
+  const [groupSelected, setGroupSelectrd] = useState<string[]>([]);
 
   useEffect(() => {
     location.hash = groupSelected.length
@@ -19,7 +19,7 @@ export function Filter() {
           label="attr"
           orientation="horizontal"
           value={groupSelected}
-          onChange={setGroupSelectrd}
+          onValueChange={(values) => setGroupSelectrd(values)}
         >
           <AttrCheckbox value="str">力量</AttrCheckbox>
           <AttrCheckbox value="int">智力</AttrCheckbox>
